@@ -1,0 +1,22 @@
+
+
+<div class="card bg-dark mt-5">
+    <div class="card-header text-white border border-white"><h3>Child Component</h3></div>
+    <div class="card-body ">
+
+        <h4 class="text-white">This is child component</h4>
+        <h5 class="bg-warning p-3 my-3"><b>{{parentData}}</b></h5>
+
+       <h5 class="text-dark bg-white" >{{inputname}}</h5>
+
+       <div>
+
+        <select class="form-control" (change)="sendInfoToParent($event)">
+            <option *ngFor="let x of branches">{{x}}</option>
+        </select>
+       </div>
+
+        <button class="btn bg-danger text-light border border-white mt-3" (click)="sendDataToParent()">Send data from child</button>
+        
+    </div>
+</div>
